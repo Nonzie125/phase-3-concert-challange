@@ -1,1 +1,59 @@
 Generic single-database configuration.
+# Concert Project
+
+This project is a Python application designed to manage a concert domain featuring bands, venues, and concerts. It utilizes SQLAlchemy for ORM, allowing for easy database interactions, and it includes a simple CLI for user interaction.
+
+## Features
+
+- Creates and manage bands and venues.
+- Schedule concerts with bands and venues.
+- Retrieve and display information about bands performing at specific venues.
+- Built-in CLI for user-friendly interaction.
+
+## Technologies Used
+
+- **Python**: Programming language for the project.
+- **SQLAlchemy**: ORM library for database interactions.
+- **SQLite**: Lightweight database for storing concert information.
+- **Click**: CLI framework for building command-line interfaces.
+
+## Project Structure
+
+
+## Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Nonzie125/phase-3-concert-challange.git
+   cd concert_project
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt
+Models
+Band
+Represents a band with attributes:
+
+id: Unique identifier for the band.
+name: Name of the band.
+hometown: Hometown of the band.
+concerts: Relationship to the Concert model.
+Venue
+Represents a concert venue with attributes:
+
+id: Unique identifier for the venue.
+name: Name of the venue.
+location: Location of the venue.
+concerts: Relationship to the Concert model.
+Concert
+Represents a concert event with attributes:
+
+id: Unique identifier for the concert.
+band_id: Foreign key to the Band model.
+venue_id: Foreign key to the Venue model.
+band: Relationship to the Band model.
+venue: Relationship to the Venue model.
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+Feel free to contact incase of questions via bandgcyber@gmail.com
